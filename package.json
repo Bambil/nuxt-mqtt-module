@@ -1,0 +1,49 @@
+{
+  "name": "nuxt-mqtt-module",
+  "version": "0.0.0",
+  "description": "A MQTT module for Nuxt.js",
+  "license": "MIT",
+  "contributors": [
+    {
+      "name": "Iman Tabrizian <tabrizian@outlook.com>"
+    }
+  ],
+  "main": "dist/index.js",
+  "repository": "https://github.com/https://github.com/bambil/nuxt-mqtt-module",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "nuxt-module",
+    "watch": "nuxt-module --watch",
+    "lint": "eslint lib src test",
+    "lint-fix": "eslint --fix lib src test",
+    "test": "NODE_ENV=test npm run build && npm run lint && jest",
+    "release": "standard-version && git push --follow-tags && npm publish",
+    "prepare": "npm run build"
+  },
+  "eslintIgnore": [
+    "*.template.*"
+  ],
+  "files": [
+    "lib",
+    "src",
+    "dist",
+    "templates"
+  ],
+  "jest": {
+    "testEnvironment": "node",
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "lib",
+      "src"
+    ]
+  },
+  "dependencies": {
+
+  },
+  "devDependencies": {
+    "nuxt-module-builder": "latest"
+  }
+}
