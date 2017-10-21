@@ -1,6 +1,6 @@
 {
   "name": "nuxt-mqtt-module",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A MQTT module for Nuxt.js",
   "license": "MIT",
   "contributors": [
@@ -40,9 +40,7 @@
       "src"
     ]
   },
-  "dependencies": {
-
-  },
+  "dependencies": {},
   "devDependencies": {
     "nuxt-module-builder": "latest"
   }
