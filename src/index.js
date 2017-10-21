@@ -1,10 +1,19 @@
-// const { resolve } = require('path')
+import mqttClient from 'mqttsocket'
 
-export default async function module (moduleOptions) {
-  // const options = Object.assign({}, moduleOptions)
+export default function module (moduleOptions) {
 
-  // this.addPlugin({
-  //   src: resolve(__dirname, '../templates/plugin.js'),
-  //   options
-  // })
+  const defaults = {
+    uri: 'ws://localhost:8083'
+  }
+
+  const options = Object.assign({}, defaults, moduleOptions)
+
+  if (process.env.MQTT_HOST) {
+    options.uri = process.env.MQTT_HOST
+  }
+
+  this.addPlugin({
+    src: mqttClient,
+    options
+  })
 }

@@ -40,7 +40,9 @@
       "src"
     ]
   },
-  "dependencies": {},
+  "dependencies": {
+    "vue-mqttsocket": "^0.1.0"
+  },
   "devDependencies": {
     "nuxt-module-builder": "latest"
   }
